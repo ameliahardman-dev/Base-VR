@@ -10,21 +10,24 @@
     <script src="https://unpkg.com/aframe-environment-component/dist/aframe-environment-component.min.js"></script>
 </head>
 <body>
- <a-scene>
-<a-entity environment="preset: goaland; dressingAmount: 700;skyColor:#231528 ;skyType:gradient ;horizonColor:#23395B ;groundTexture:walkernoise ; dressingColor:teal ;groundColor:purple ;ground:canyon ;groundYScale:10; ground:noise"></a-entity>
-<!-- Museum floor starts here -->
- <a-cylinder id="floor" position="0 0 0" radius="5" color="#305252" height="0.5"></a-cylinder>
-<a-box id="box1" position="0 1.473 4.907" rotation="0 0 0" scale="10 6 0.2" color="#98DFEA"></a-box>
-<a-box id="box2" position="0 1.473 -4.907" rotation="0 0 0" scale="10 6 0.2" color="#98DFEA"></a-box>
-<a-box id="box3" position="5.049 1.454 -0.008" rotation="0 -90 0" scale="10 6 0.2" color="#98DFEA"></a-box>
-<a-box id="box4" position="-5.049 1.454 -0.008" rotation="0 -90 0" scale="10 6 0.2" color="#98DFEA"></a-box>
-<a-cylinder id="triangle_front" segments-radial="3" position="0 6.5 4.907" rotation="-90 0 0" scale="6 0.2 4" color="#98DFEA"></a-cylinder>
-<a-cylinder id="triangle_back" segments-radial="3" position="0 6.5 -4.907" rotation="-90 0 0" scale="6 0.2 4" color="#98DFEA"></a-cylinder>
-<a-box id="roof_right" position="2.8 7.5 0" rotation="50 90 0" scale="10.931 0.20 8.3" color="#70566D"></a-box>
-<a-box id="roof_lefe" position="-2.8 7.5 -0.017" rotation="50 -90 0" scale="10.931 0.20 8.3" color="#70566D"></a-box>
-<a-plane id="art1" src="cookie_pic.jpg" scale="2 2 0.05" rotation="0 0 0" position="-0.2 1.934 -4.792"></a-plane>
-<a-assets><a-plane id="art1" src="cookie_pic.jpg" scale="2 4 1" rotation="0 0 0" position="-0.2 1.934 -4.792"></a-plane></a-assets>
-<a-plane id="art1" src="rhymic_medels.jpg" scale="2 4 1" rotation="0 0 0" position="10.9 6 0.2"></a-plane>
-</a-scene>
+    <a-scene>
+        <a-assets>
+            <a-plane id="art1" src="cookie_pic.jpg" scale="2 4 1" rotation="0 0 0" position="-0.2 1.934 -4.792"></a-plane>
+        </a-assets>
+        <a-entity environment="preset: goaland; dressingAmount: 700;skyColor:#231528 ;skyType:gradient ;horizonColor:#23395B ;groundTexture:walkernoise ; dressingColor:teal ;groundColor:purple ;ground:canyon ;groundYScale:10; ground:noise"></a-entity>
+        <!-- Museum floor starts here -->
+        <a-cylinder id="floor" position="0 0 0" radius="5" color="#305252" height="0.5"></a-cylinder>
+        <a-box id="box1" position="0 1.473 4.907" rotation="0 0 0" scale="10 6 0.2" color="#98DFEA"></a-box>
+        <a-box id="box2" position="0 1.473 -4.907" rotation="0 0 0" scale="10 6 0.2" color="#98DFEA"></a-box>
+        <a-box id="box3" position="5.049 1.454 -0.008" rotation="0 -90 0" scale="10 6 0.2" color="#98DFEA"></a-box>
+        <a-box id="box4" position="-5.049 1.454 -0.008" rotation="0 -90 0" scale="10 6 0.2" color="#98DFEA"></a-box>
+        <a-cylinder id="triangle_front" segments-radial="3" position="0 6.5 4.907" rotation="-90 0 0" scale="6 0.2 4" color="#98DFEA"></a-cylinder>
+        <a-cylinder id="triangle_back" segments-radial="3" position="0 6.5 -4.907" rotation="-90 0 0" scale="6 0.2 4" color="#98DFEA"></a-cylinder>
+        <a-box id="roof_right" position="2.8 7.5 0" rotation="50 90 0" scale="10.931 0.20 8.3" color="#70566D"></a-box>
+        <a-box id="roof_lefe" position="-2.8 7.5 -0.017" rotation="50 -90 0" scale="10.931 0.20 8.3" color="#70566D"></a-box>
+        <a-plane id="art1" src="cookie_pic.jpg" scale="2 2 0.05" rotation="0 0 0" position="-0.2 1.934 -4.792"></a-plane>
+        <a-plane id="art1" src="rhymic_medels.jpg" scale="2 4 1" rotation="0 0 0" position=""></a-plane>
+    </a-scene>
+
 </body>
 </html>
