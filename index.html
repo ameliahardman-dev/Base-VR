@@ -8,11 +8,23 @@
     <title>amelia VR</title>
     <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
     <script src="https://unpkg.com/aframe-environment-component/dist/aframe-environment-component.min.js"></script>
+    <script src="script.js"></script>
 </head>
 <body>
     <a-scene>
         <a-assets>
-            <a-plane id="art1" src="cookie_pic.jpg" scale="2 4 1" rotation="0 0 0" position="-0.2 1.934 -4.792"></a-plane>
+           
+                          <!-- Video -->
+
+  <video id="videoclip" loop="true" src="tvAssets/bird.mp4" crossorigin="anonymous" preload="auto"></video>
+
+  <!-- Buttons and Background -->
+
+  <img id="play" src="tvAssets/btnPlay.png" preload="auto">
+
+  <img id="pause" src="tvAssets/btnPause.png" preload="auto">
+
+  <img id="tv_background" src="tvAssets/tv_background.jpg" preload="auto">
         </a-assets>
         <a-entity environment="preset: goaland; dressingAmount: 700;skyColor:#231528 ;skyType:gradient ;horizonColor:#23395B ;groundTexture:walkernoise ; dressingColor:teal ;groundColor:purple ;ground:canyon ;groundYScale:10; ground:noise"></a-entity>
         <!-- Museum floor starts here -->
@@ -25,9 +37,38 @@
         <a-cylinder id="triangle_back" segments-radial="3" position="0 6.5 -4.907" rotation="-90 0 0" scale="6 0.2 4" color="#98DFEA"></a-cylinder>
         <a-box id="roof_right" position="2.8 7.5 0" rotation="50 90 0" scale="10.931 0.20 8.3" color="#70566D"></a-box>
         <a-box id="roof_lefe" position="-2.8 7.5 -0.017" rotation="50 -90 0" scale="10.931 0.20 8.3" color="#70566D"></a-box>
-        <a-plane id="art1" src="cookie_pic.jpg" scale="2 2 0.05" rotation="0 0 0" position="-0.2 1.934 -4.792"></a-plane>
-        <a-plane id="art1" src="rhymic_medels.jpg" scale="2 4 1" rotation="0 0 0" position=""></a-plane>
-    </a-scene>
+        <a-plane id="art1" src="images/cookie_pic.jpg" scale="2 2 0.05" rotation="0 0 0" position="-0.162 1.934 -4.792"></a-plane>
+        <a-plane id="frame2" position="-2.934 1.934 4.792" rotation="0 180 0" scale="2 2 0.07" material="src:images/frame_outlinne.png; transparent: true; alphaTest: 0.5">
+          <a-plane id="art2" src="images/olivia_burger.jpg"  scale=".9 .9 0.05" position="0.002 0.002 0.011"></a-plane>
+        </a-plane>
+        <a-plane id="art3" src="images/rhymic_medels.jpg"  scale="1 1 0.05" position="-4.650 1.899 0.011"rotation="0 90 0"></a-plane>
+        <a-obj-model id="3dModel1" src="images/tinker.obj" mtl="images/obj.mtl" position="0 0 0" rotation="-90 0 0" scale="0.05 0.05 0.05"></a-obj-model>
+        <a-entity>
+
+  <a-video src="#videoclip" position="-3.893 1.6 0" rotation="0 90 0" width="2" height="1.125"></a-video>
+
+  <!-- TV background -->
+
+  <a-plane id="videoControls" position="-3.893 0.854 0" scale="2 0.386 1.714" rotation="0 90 0" opacity="1" src="#tv_background">
+
+    <!-- Play button -->
+
+    <a-plane id="vidplaybox" src="#play" scale="0.122 0.678 0.122" position="-0.350 0 .01" shader="flat" transparent="true" videoplayer></a-plane>
+
+    <!-- Stop button -->
+
+    <a-plane id="vidpausebox" src="#pause" scale="0.122 0.678 0.122" position="0.350 0 .01" shader="flat" transparent="true" videopauser></a-plane>
+
+  </a-plane>
+
+</a-entity>
+
+<!-- Allows clicking with the mouse -->
+
+<a-entity cursor="rayOrigin: mouse"></a-entity>
+            </a-scene>
+
 
 </body>
+
 </html>
